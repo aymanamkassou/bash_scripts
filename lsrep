@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Entrez les noms des répertoires (Ctrl+D pour terminer) :"
+
+while read -r repertoire; do
+    if [ -d "$repertoire" ]; then
+        echo "Contenu de $repertoire :"
+        ls "$repertoire"
+        echo "------------------------"
+    else
+        echo "Erreur : $repertoire n'est pas un répertoire"
+    fi
+done

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+chemin="$1"
+chemin="${chemin%/}"
+basename="${chemin##*/}"
+
+echo "$basename" 

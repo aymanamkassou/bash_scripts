@@ -1,0 +1,9 @@
+#!/bin/bash
+
+IFS=" =()"
+id=$(id)
+
+set -- $id
+
+
+echo "L'utilisateur courant a l'uid: $2"

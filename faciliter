@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 nombre"
+    exit 1
+fi
+
+n=$1
+if ! [[ "$n" =~ ^[0-9]+$ ]]; then
+    echo "Erreur : l'argument doit être un entier positif"
+    exit 1
+fi
+
+if [ $n -gt 20 ]; then
+    echo "Erreur : n trop grand, risque de débordement"
+    exit 1
+fi
+
+resultat=1
+for ((i=1; i<=n; i++)); do
+    resultat=$((resultat * i))
+done
+echo $resultat

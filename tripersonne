@@ -1,0 +1,17 @@
+#!/bin/bash 
+
+
+while read -r line; do 
+	if [[ ${line: -1} == 'm' ]]; then
+		if [[ ! -f garcons ]]; then
+			touch garcons;
+		fi
+		echo ${line% *} >> garcons;
+	fi
+	if [[ ${line: -1} == 'f' ]]; then
+		if [[ ! -f filles ]]; then
+			touch filles;
+		fi
+		echo ${line% *} >> filles;
+	fi 
+done < personnes

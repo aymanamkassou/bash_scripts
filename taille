@@ -1,0 +1,6 @@
+#!/bin/bash 
+
+file_size=$(du -k "$1" | cut -f1);
+access_rights_file=$(ls -l "$1" | cut -d ' ' -f1);
+
+echo "Le fichier $1 de taille ${file_size} a les droits dacces: ${access_rights_file}"

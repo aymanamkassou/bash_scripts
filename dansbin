@@ -1,0 +1,10 @@
+#!/bin/bash
+
+grep_result=$(ls /bin/ | grep -w "^$1$");
+
+if [[ -z $grep_result ]]; then 
+	echo 1;
+else 
+	echo 0;
+fi
+

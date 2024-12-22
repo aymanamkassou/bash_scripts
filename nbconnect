@@ -1,0 +1,5 @@
+#!/bin/bash
+
+count_users=$(who | wc -l );
+
+echo ${count_users};

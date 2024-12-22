@@ -1,0 +1,8 @@
+#!/bin/bash
+
+nom_connexion=$(whoami)
+repertoire_courant=$(pwd)
+
+echo 'mon nom de connexion:' $nom_connexion
+echo 'mon repertoire courant est:' $repertoire_courant
+echo 'mon repertoire courant est:' $PWD

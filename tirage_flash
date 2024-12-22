@@ -1,0 +1,13 @@
+#!/bin/bash
+
+declare -A numeros
+count=0
+
+while [ $count -lt 6 ]; do
+    num=$((RANDOM % 49 + 1))
+    if [ -z "${numeros[$num]}" ]; then
+        numeros[$num]=1
+        echo -n "$num "
+        ((count++))
+    fi
+done

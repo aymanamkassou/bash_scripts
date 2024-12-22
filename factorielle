@@ -1,0 +1,28 @@
+function factorielle() {
+    if [ $1 -le 1 ]; then
+        echo 1
+        return
+    fi
+    local n=$1
+    local sub=$((n-1))
+    local subfact=$(factorielle $sub)
+    echo $((n * subfact))
+}
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 nombre"
+    exit 1
+fi
+
+n=$1
+if ! [[ "$n" =~ ^[0-9]+$ ]]; then
+    echo "Erreur : l'argument doit être un entier positif"
+    exit 1
+fi
+
+if [ $n -gt 20 ]; then
+    echo "Erreur : n trop grand, risque de débordement"
+    exit 1
+fi
+
+factorielle $n

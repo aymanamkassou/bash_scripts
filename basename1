@@ -1,0 +1,13 @@
+#!/bin/bash
+
+chemin="$1"
+suffixe="$2"
+
+chemin="${chemin%/}"
+basename="${chemin##*/}"
+
+if [ -n "$suffixe" ]; then
+    basename="${basename%$suffixe}"
+fi
+
+echo "$basename"

@@ -1,0 +1,6 @@
+#!/bin/bash 
+
+echo "Entrez une suite de mots:"
+read -a inputs
+
+echo "${#inputs[@]}"

@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+jour=$(date | cut -d ' ' -f3);
+
+echo ${jour};

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+echo "Entrer une suite de 3 mots:"
+read -a inputs 
+
+
+echo "${inputs[0]} ${inputs[2]}"
+
